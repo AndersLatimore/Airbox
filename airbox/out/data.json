@@ -1,0 +1,214 @@
+{
+    "project": {},
+    "files": {
+        "src/airbox.js": {
+            "name": "src/airbox.js",
+            "modules": {},
+            "classes": {
+                "ab": 1,
+                "abSetup": 1,
+                "getContent": 1,
+                "open": 1,
+                "close": 1,
+                "airbox": 1,
+                "prototype.airbox": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "ab": {
+            "name": "ab",
+            "shortname": "ab",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 11,
+            "description": "ab contains all deafults that the functionality requires;\nnamespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss."
+        },
+        "abSetup": {
+            "name": "abSetup",
+            "shortname": "abSetup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 35,
+            "description": "Setup everything in the setup function.\nAccess and override all methods using $.ab.methods."
+        },
+        "getContent": {
+            "name": "getContent",
+            "shortname": "getContent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 70,
+            "description": "Prepares the content and converts it into a jQuery object."
+        },
+        "open": {
+            "name": "open",
+            "shortname": "open",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 100,
+            "description": "Opens the lightbox.\n\"this\" contains $instance with the lightbox, and with the config."
+        },
+        "close": {
+            "name": "close",
+            "shortname": "close",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 129,
+            "description": "Closes the lightbox.\n\"this\" contains $instance with the lightbox, and the config."
+        },
+        "airbox": {
+            "name": "airbox",
+            "shortname": "airbox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 157,
+            "description": "Extension of jQuery with a standalone airbox method."
+        },
+        "prototype.airbox": {
+            "name": "prototype.airbox",
+            "shortname": "prototype.airbox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/airbox.js",
+            "line": 190,
+            "description": "Bind airbox on document.ready"
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/airbox.js",
+            "line": 1,
+            "description": "Airbox – lightweight, airy jQuery lightbox\nVersion 0.1.0 – https://github.com/AndyAkesson/airbox\n\nCopyright 2013, Anders Akesson\nMassachusetts Institute of Technology Licensed.\nUse as you please.",
+            "class": "ab"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 41,
+            "itemtype": "method",
+            "name": "abSetup",
+            "params": [
+                {
+                    "name": "Configuration",
+                    "description": "for the setup.",
+                    "type": "Config"
+                },
+                {
+                    "name": "What",
+                    "description": "is coming into the function.",
+                    "type": "Content"
+                }
+            ],
+            "class": "abSetup"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 75,
+            "itemtype": "method",
+            "name": "getContent",
+            "class": "getContent"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 106,
+            "itemtype": "method",
+            "name": "open",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The event triggered"
+                }
+            ],
+            "class": "open"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 135,
+            "itemtype": "method",
+            "name": "close",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The event triggered."
+                }
+            ],
+            "class": "close"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 162,
+            "itemtype": "method",
+            "name": "airbox",
+            "params": [
+                {
+                    "name": "$content",
+                    "description": "Content coming in to the function."
+                },
+                {
+                    "name": "config",
+                    "description": "Configurations"
+                }
+            ],
+            "class": "airbox"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 176,
+            "itemtype": "method",
+            "name": "prototype.airbox",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "Configurations."
+                },
+                {
+                    "name": "$content",
+                    "description": "Content coming in to function."
+                }
+            ],
+            "class": "prototype.airbox"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 195,
+            "itemtype": "method",
+            "name": "$(document).ready",
+            "class": "prototype.airbox"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nAirbox – lightweight, airy jQuery lightbox\nVersion 0.1.0 – https://github.com/AndyAkesson/airbox\n\nCopyright 2013, Anders Akesson\nMassachusetts Institute of Technology Licensed.\nUse as you please.",
+            "line": " src/airbox.js:1"
+        }
+    ]
+}

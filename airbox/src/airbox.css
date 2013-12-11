@@ -39,14 +39,18 @@
 	.airbox .airbox-content {
 		display: inline-block;
 		vertical-align: middle;
-		padding: 1%;
-		width: 50%;
-		max-height: 95%;
+		padding: 2%;
+		/*width: 50%;*/
+		max-width: 90%;
 		overflow: auto;
 		cursor: auto;
 		background: #F8F8F8; 
 	}
-	.airbox .airbox-image {
-		width: 100%;
+	.airbox img {
+		width: 80%;
+		height: auto;
 	}
+	/*.airbox .airbox-image {
+		width: 100%;
+	}*/
 }

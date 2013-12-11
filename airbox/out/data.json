@@ -29,7 +29,9 @@
             "extension_for": [],
             "file": "src/airbox.js",
             "line": 11,
-            "description": "ab contains all deafults that the functionality requires;\nnamespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss."
+            "description": "ab contains all deafults that the functionality requires;\nnamespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss.",
+            "itemtype": "method",
+            "type": "Defaults"
         },
         "abSetup": {
             "name": "abSetup",
@@ -40,7 +42,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 35,
+            "line": 46,
             "description": "Setup everything in the setup function.\nAccess and override all methods using $.ab.methods."
         },
         "getContent": {
@@ -52,7 +54,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 70,
+            "line": 81,
             "description": "Prepares the content and converts it into a jQuery object."
         },
         "open": {
@@ -64,7 +66,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 100,
+            "line": 111,
             "description": "Opens the lightbox.\n\"this\" contains $instance with the lightbox, and with the config."
         },
         "close": {
@@ -76,7 +78,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 129,
+            "line": 140,
             "description": "Closes the lightbox.\n\"this\" contains $instance with the lightbox, and the config."
         },
         "airbox": {
@@ -88,7 +90,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 157,
+            "line": 168,
             "description": "Extension of jQuery with a standalone airbox method."
         },
         "prototype.airbox": {
@@ -100,7 +102,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/airbox.js",
-            "line": 190,
+            "line": 201,
             "description": "Bind airbox on document.ready"
         }
     },
@@ -113,7 +115,52 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 41,
+            "line": 18,
+            "itemtype": "method",
+            "name": "The default variables for ab.",
+            "type": "Defaults",
+            "params": [
+                {
+                    "name": "Name",
+                    "description": "of the events and css class prefix.",
+                    "type": "Namespace"
+                },
+                {
+                    "name": "Context",
+                    "description": "used to search for the lightbox content and triggers.",
+                    "type": "Context"
+                },
+                {
+                    "name": "Elements",
+                    "description": "that trigger the lightbox.",
+                    "type": "Select"
+                },
+                {
+                    "name": "Attribute",
+                    "description": "of the triggered element that contains the select to the content.",
+                    "type": "TargetAttr"
+                },
+                {
+                    "name": "Triggers",
+                    "description": "the lightbox.",
+                    "type": "OpenTrigger"
+                },
+                {
+                    "name": "Triggers",
+                    "description": "the closing of the lightbox.",
+                    "type": "CloseTrigger"
+                },
+                {
+                    "name": "Reset",
+                    "description": "css.",
+                    "type": "ResetCss"
+                }
+            ],
+            "class": "ab"
+        },
+        {
+            "file": "src/airbox.js",
+            "line": 52,
             "itemtype": "method",
             "name": "abSetup",
             "params": [
@@ -123,8 +170,8 @@
                     "type": "Config"
                 },
                 {
-                    "name": "What",
-                    "description": "is coming into the function.",
+                    "name": "The",
+                    "description": "content coming into the function.",
                     "type": "Content"
                 }
             ],
@@ -132,14 +179,14 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 75,
+            "line": 86,
             "itemtype": "method",
             "name": "getContent",
             "class": "getContent"
         },
         {
             "file": "src/airbox.js",
-            "line": 106,
+            "line": 117,
             "itemtype": "method",
             "name": "open",
             "params": [
@@ -152,7 +199,7 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 135,
+            "line": 146,
             "itemtype": "method",
             "name": "close",
             "params": [
@@ -165,7 +212,7 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 162,
+            "line": 173,
             "itemtype": "method",
             "name": "airbox",
             "params": [
@@ -182,7 +229,7 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 176,
+            "line": 187,
             "itemtype": "method",
             "name": "prototype.airbox",
             "params": [
@@ -199,7 +246,7 @@
         },
         {
             "file": "src/airbox.js",
-            "line": 195,
+            "line": 206,
             "itemtype": "method",
             "name": "$(document).ready",
             "class": "prototype.airbox"

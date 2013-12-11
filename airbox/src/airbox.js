@@ -9,21 +9,32 @@
 (function($){
 	"use strict";
 	/**
-	* ab contains all deafults that the functionality requires;
-	* namespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss.
-	*
-	* @class ab
-	* 
+	 * ab contains all deafults that the functionality requires;
+	 * namespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss.
+	 *
+	 * @class ab
+	 * @method {Defaults} The default variables for ab.
+	*/
+	/**
+	 * @method {Defaults} The default variables for ab.
+	 * @param {namespace} Name of the events and css class prefix.
+	 * @param {context} Context used to search for the lightbox content and triggers. 
+	 * @param {select} Elements that trigger the lightbox.
+	 * @param {targetAttr} Attribute of the triggered element that contains the select to the content.
+	 * @param {openTrigger} Triggers the lightbox.
+	 * @param {closeTrigger} Triggers the closing of the lightbox.
+	 * @param {resetCss} Reset css.
+	 * 
 	*/
 	var ab = {
 		Defaults: {  
-			namespace:    'airbox',         //Name of the events and css class prefix.
-			context:      'body',           //Context used to search for the lightbox content and triggers. 
-			select:       '[data-airbox]',  //Elements that trigger the lightbox.
-			targetAttr:   'data-airbox',    //Attribute of the triggered element that contains the select to the content.
-			openTrigger:  'click',          //Triggers the lightbox.
-			closeTrigger: 'click',          //Triggers the closing of the lightbox.
-			resetCss:     false,            //Reset css.
+			namespace:    'airbox',         
+			context:      'body',           
+			select:       '[data-airbox]',  
+			targetAttr:   'data-airbox',    
+			openTrigger:  'click',          
+			closeTrigger: 'click',          
+			resetCss:     false,            
 			open: function(event){          
 				$.proxy($.airbox.methods.open, this, event)();
 			},
@@ -41,7 +52,7 @@
 			 /**
 			 * @method abSetup
 			 * @param  {config}  Configuration for the setup.
-			 * @param  {content} What is coming into the function.
+			 * @param  {content} The content coming into the function.
 			 */
 			abSetup: function(config, content){
 				var $elem = $(this) || $(),
@@ -112,6 +123,8 @@
 					event.preventDefault();
 				}
 				var self = this;
+				//Hide scrollbars
+    			$('body').css('overflow', 'hidden');
 				// If we have content, add it and show the lightbox 
 				if($.proxy(ab.methods.getContent, self)() !== false){
 					$(document).bind('keyup.'+self.config.namespace, function(e) {
@@ -140,6 +153,8 @@
 				if(event){
 					event.preventDefault();
 				}
+				//Show scrollbars
+				$('body').css('overflow', 'auto'); 
 				var self = this,
 					config = self.config,
 					$instance = $(event.target);

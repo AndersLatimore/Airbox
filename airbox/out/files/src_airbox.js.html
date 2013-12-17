@@ -41,19 +41,7 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/ab.html">ab</a></li>
-            
-                <li><a href="../classes/abSetup.html">abSetup</a></li>
-            
-                <li><a href="../classes/airbox.html">airbox</a></li>
-            
-                <li><a href="../classes/close.html">close</a></li>
-            
-                <li><a href="../classes/getContent.html">getContent</a></li>
-            
-                <li><a href="../classes/open.html">open</a></li>
-            
-                <li><a href="../classes/prototype.airbox.html">prototype.airbox</a></li>
+                <li><a href="../classes/Main.html">Main</a></li>
             
             </ul>
 
@@ -105,17 +93,14 @@
 * Copyright 2013, Anders Akesson
 * Massachusetts Institute of Technology Licensed.
 * Use as you please.
+*
+* @class Main
 */
 (function($){
 	&quot;use strict&quot;;
 	/**
 	 * ab contains all deafults that the functionality requires;
 	 * namespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss.
-	 *
-	 * @class ab
-	 * @method {Defaults} The default variables for ab.
-	*/
-	/**
 	 * @method {Defaults} The default variables for ab.
 	 * @param {namespace} Name of the events and css class prefix.
 	 * @param {context} Context used to search for the lightbox content and triggers. 
@@ -143,13 +128,10 @@
 			}
 		},
 		methods: { 
-			/**
+			 /**
 			 * Setup everything in the setup function.
 			 * Access and override all methods using $.ab.methods.
-			 *
-			 * @class abSetup
-			 */
-			 /**
+			 * 
 			 * @method abSetup
 			 * @param  {config}  Configuration for the setup.
 			 * @param  {content} The content coming into the function.
@@ -180,10 +162,7 @@
 
 			/**
 			 * Prepares the content and converts it into a jQuery object.
-			 *
-			 * @class getContent
-			 */
-			/**
+			 * 
 			 * @method getContent
 			 */
 			getContent: function(){
@@ -211,10 +190,7 @@
 			/**
 			 * Opens the lightbox.
 			 * &quot;this&quot; contains $instance with the lightbox, and with the config.
-			 *
-			 * @class open
-			 */
-			/**
+			 * 
 			 * @method open
 			 * @param  event The event triggered
 			 */
@@ -223,6 +199,8 @@
 					event.preventDefault();
 				}
 				var self = this;
+				//Hide scrollbars
+    			$(&#x27;body&#x27;).css(&#x27;overflow&#x27;, &#x27;hidden&#x27;);
 				// If we have content, add it and show the lightbox 
 				if($.proxy(ab.methods.getContent, self)() !== false){
 					$(document).bind(&#x27;keyup.&#x27;+self.config.namespace, function(e) {
@@ -240,10 +218,7 @@
 			/**
 			 * Closes the lightbox.
 			 * &quot;this&quot; contains $instance with the lightbox, and the config.
-			 *
-			 * @class close
-			 */
-			/**
+			 * 
 			 * @method close
 			 * @param  event The event triggered.
 			 */
@@ -251,6 +226,8 @@
 				if(event){
 					event.preventDefault();
 				}
+				//Show scrollbars
+				$(&#x27;body&#x27;).css(&#x27;overflow&#x27;, &#x27;auto&#x27;); 
 				var self = this,
 					config = self.config,
 					$instance = $(event.target);
@@ -267,10 +244,7 @@
 
 	/**
 	 * Extension of jQuery with a standalone airbox method.
-	 *
-	 * @class airbox
-	 */
-	/**
+	 * 
 	 * @method airbox
 	 * @param  $content Content coming in to the function.
 	 * @param  config   Configurations
@@ -281,10 +255,7 @@
 
 	/**
 	 * Extension of jQuery with select.
-	 *
-	 * @class prototype.airbox
-	 */
-	/**
+	 * 
 	 * @method prototype.airbox
 	 * @param  config   Configurations.
 	 * @param  $content Content coming in to function.
@@ -300,10 +271,7 @@
 
 	/**
 	 * Bind airbox on document.ready
-	 *
-	 * @class prototype.airbox
-	 */
-	/**
+	 * 
 	 * @method $(document).ready
 	 */
 	$(document).ready(function(){

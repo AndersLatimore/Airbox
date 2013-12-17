@@ -5,17 +5,14 @@
 * Copyright 2013, Anders Akesson
 * Massachusetts Institute of Technology Licensed.
 * Use as you please.
+*
+* @class Main
 */
 (function($){
 	"use strict";
 	/**
 	 * ab contains all deafults that the functionality requires;
 	 * namespace, context, select, targetAttr, openTrigger, closeTrigger, resetCss.
-	 *
-	 * @class ab
-	 * @method {Defaults} The default variables for ab.
-	*/
-	/**
 	 * @method {Defaults} The default variables for ab.
 	 * @param {namespace} Name of the events and css class prefix.
 	 * @param {context} Context used to search for the lightbox content and triggers. 
@@ -43,13 +40,10 @@
 			}
 		},
 		methods: { 
-			/**
+			 /**
 			 * Setup everything in the setup function.
 			 * Access and override all methods using $.ab.methods.
-			 *
-			 * @class abSetup
-			 */
-			 /**
+			 * 
 			 * @method abSetup
 			 * @param  {config}  Configuration for the setup.
 			 * @param  {content} The content coming into the function.
@@ -80,10 +74,7 @@
 
 			/**
 			 * Prepares the content and converts it into a jQuery object.
-			 *
-			 * @class getContent
-			 */
-			/**
+			 * 
 			 * @method getContent
 			 */
 			getContent: function(){
@@ -111,10 +102,7 @@
 			/**
 			 * Opens the lightbox.
 			 * "this" contains $instance with the lightbox, and with the config.
-			 *
-			 * @class open
-			 */
-			/**
+			 * 
 			 * @method open
 			 * @param  event The event triggered
 			 */
@@ -142,10 +130,7 @@
 			/**
 			 * Closes the lightbox.
 			 * "this" contains $instance with the lightbox, and the config.
-			 *
-			 * @class close
-			 */
-			/**
+			 * 
 			 * @method close
 			 * @param  event The event triggered.
 			 */
@@ -171,10 +156,7 @@
 
 	/**
 	 * Extension of jQuery with a standalone airbox method.
-	 *
-	 * @class airbox
-	 */
-	/**
+	 * 
 	 * @method airbox
 	 * @param  $content Content coming in to the function.
 	 * @param  config   Configurations
@@ -185,10 +167,7 @@
 
 	/**
 	 * Extension of jQuery with select.
-	 *
-	 * @class prototype.airbox
-	 */
-	/**
+	 * 
 	 * @method prototype.airbox
 	 * @param  config   Configurations.
 	 * @param  $content Content coming in to function.
@@ -204,10 +183,7 @@
 
 	/**
 	 * Bind airbox on document.ready
-	 *
-	 * @class prototype.airbox
-	 */
-	/**
+	 * 
 	 * @method $(document).ready
 	 */
 	$(document).ready(function(){

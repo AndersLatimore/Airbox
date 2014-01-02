@@ -18,7 +18,7 @@
 	 * @param {context} Context used to search for the lightbox content and triggers. 
 	 * @param {select} Elements that trigger the lightbox.
 	 * @param {targetAttr} Attribute of the triggered element that contains the select to the content.
-	 * @param {openTrigger} Triggers the lightbox.
+	 * @param {openTrigger} Triggers the opening of the lightbox.
 	 * @param {closeTrigger} Triggers the closing of the lightbox.
 	 * @param {resetCss} Reset css.
 	 * 
